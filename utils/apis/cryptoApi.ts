@@ -7,8 +7,7 @@ interface CryptoApiResponse {
   market_cap: number;
 }
 
-// cryptoApi.ts
-// cryptoApi.ts
+
 export interface CryptoData {
   id: string;
   image: string;
@@ -56,19 +55,14 @@ export const fetchCryptoPrice = async (cryptoId: string) => {
 };
 
 
-// cryptoApi.ts
 
-// cryptoApi.ts
-// cryptoApi.ts
-// cryptoApi.ts
-// cryptoApi.ts
 export interface TrendingCryptoData {
   id: string;
   name: string;
   symbol: string;
   market_cap_rank: number;
   price_change_percentage_24h?: number
-  // price_change_percentage_24h: ; // This field represents percentage changes in various currencies
+  // price_change_percentage_24h: ; 
   thumb: string;
 }
 
@@ -88,7 +82,7 @@ export const fetchTrendingCoins = async (): Promise<TrendingCryptoData[]> => {
       throw new Error('Invalid API response structure. Expected an array under "coins" property.');
     }
 
-    // Extract the top 3 trending coins
+    // top 3 trending coins
     const top3TrendingCoins = result.coins
       .map((coin) => coin.item)
       .slice(0, 3);

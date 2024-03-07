@@ -18,11 +18,11 @@ const GetStartedCard: React.FC = () => {
         
         <div className="relative mt-4 rounded-md overflow-hidden" style={{ backgroundColor: 'rgb(0, 82, 254)' }}>
           <Image 
-            src="/images/0_FOHWeuP1TvisyWJq-removebg-preview.png"  // Replace with the actual source of your image
+            src="/images/0_FOHWeuP1TvisyWJq-removebg-preview.png"  
             alt=""
             className="object-cover bg-transparent"
-            width={500} // Set the desired width of the image
-            height={400} // Set the desired height of the image
+            width={500} 
+            height={400} 
           />
         </div>
       </div>
