@@ -1,0 +1,105 @@
+/* cryptoList.css */
+
+.crypto-list-container {
+  margin-top: 20px;
+}
+
+.crypto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.crypto-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+ width: calc(25% - 20px);
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.crypto-card:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.crypto-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.crypto-card p {
+  margin: 0;
+}
+
+.crypto-card .crypto-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.crypto-card .crypto-info p:last-child {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.crypto-card .crypto-info .usd-label {
+  color: #007bff;
+}
+
+.crypto-card.card-open {
+  background-color: #e0e0e0;
+  transform: scale(1);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .crypto-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .crypto-card {
+    width: 100%;
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure that the modal is displayed on top of other content */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
